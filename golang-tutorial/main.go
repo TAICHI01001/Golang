@@ -12,7 +12,6 @@ func bubbleSort(arr []int) {
 	}
 }
 func main() {
-	fmt.Println("Bubble Sorting Algorithm")
 	arr := []int{64, 34, 25, 12, 22, 11, 90}
 	fmt.Println("Unsorted array: ")
 	for _, v := range arr {
