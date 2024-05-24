@@ -2,11 +2,13 @@ package main
 
 import "fmt"
 
+func addValue(myArray []int, value ...int) []int {
+	return append(myArray, value...)
+}
 func main() {
-	myArray1 := []int{1, 2, 3}
-	for i := 0; i < len(myArray1); i++ {
-		fmt.Print("", myArray1[i])
+	myArray := []int{}
+	myArray = addValue(myArray, 112, 113, 334)
+	for i := 0; i < len(myArray); i++ {
+		fmt.Printf("value : %d ", myArray[i])
 	}
-	var myArray2 = []int{}
-	fmt.Println("", len(myArray2))
 }
