@@ -1,16 +1,11 @@
+/*
+Copyright © 2024 NAME HERE <EMAIL ADDRESS>
+
+*/
 package main
 
-import (
-	"flag"
-	"fmt"
-	"strings"
-)
+import "github.com/TaiChi112/Golang/CLI/cmd"
 
 func main() {
-	name := flag.String("var", "What's I can help you!", "This first test golang cli")
-	flag.Parse()
-	if flag.NArg() > 0 {
-		*name = strings.Join(flag.Args(), " ")
-	}
-	fmt.Printf("%s\n", *name)
+	cmd.Execute()
 }
