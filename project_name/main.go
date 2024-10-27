@@ -2,14 +2,25 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"math/rand"
+	"time"
 )
 
+func add(a int, b int) int {
+	return a + b
+}
+func swap(a, b string) (string, string) {
+	return b, a
+}
 func main() {
-	var i, j int = 1, 2
-	k := 3
-	c, python, java := true, false, "no!"
-	fmt.Println("i=", i, "j=", j, "k=", k, "c=", c, "python=", python, "java=", java)
-
-	fmt.Println("My favorite number is", rand.Intn(10))
+	var a, b string
+	a, b = "Alice", "Bob"
+	fmt.Printf("%s %s\n", a, b)
+	a, b = swap("Alice", "Bob")
+	fmt.Println(a, b)
+	fmt.Println(add(1, 2))
+	fmt.Println("Random number:", rand.Intn(100))
+	fmt.Println("The time is", time.Now())
+	fmt.Println(math.Pi)
 }
